@@ -121,7 +121,7 @@ function BranchPicker({
 		<div className="relative">
 			<button
 				onClick={() => setOpen(!open)}
-				className="flex items-center gap-1.5 px-3 py-2 text-[11px] font-mono border border-border hover:bg-muted/60 dark:hover:bg-white/3 transition-colors cursor-pointer"
+				className="flex items-center gap-1.5 h-9 px-3 text-[11px] font-mono border border-border hover:bg-muted/60 dark:hover:bg-white/3 transition-colors cursor-pointer"
 			>
 				<GitBranch className="w-3 h-3 text-muted-foreground/70" />
 				<span className="max-w-[140px] truncate">{currentBranch}</span>
@@ -266,7 +266,7 @@ function CommitsToolbar({
 					placeholder="Search commits..."
 					value={search}
 					onChange={(e) => onSearchChange(e.target.value)}
-					className="w-full rounded-md border border-border bg-background px-3 py-2 pl-9 text-sm placeholder:text-muted-foreground/50 focus:outline-none focus:ring-1 focus:ring-ring"
+					className="w-full rounded-md border border-border bg-background h-9 px-3 pl-9 text-sm placeholder:text-muted-foreground/50 focus:outline-none focus:ring-1 focus:ring-ring"
 				/>
 				<svg
 					className="absolute left-3 top-1/2 -translate-y-1/2 text-muted-foreground/50"
@@ -288,20 +288,20 @@ function CommitsToolbar({
 				value={since}
 				onChange={(e) => onSinceChange(e.target.value)}
 				title="Since date"
-				className="rounded-md border border-border bg-background px-2 py-2 font-mono text-xs text-muted-foreground focus:outline-none focus:ring-1 focus:ring-ring"
+				className="rounded-md border border-border bg-background h-9 px-2 font-mono text-xs text-muted-foreground focus:outline-none focus:ring-1 focus:ring-ring"
 			/>
 			<input
 				type="date"
 				value={until}
 				onChange={(e) => onUntilChange(e.target.value)}
 				title="Until date"
-				className="rounded-md border border-border bg-background px-2 py-2 font-mono text-xs text-muted-foreground focus:outline-none focus:ring-1 focus:ring-ring"
+				className="rounded-md border border-border bg-background h-9 px-2 font-mono text-xs text-muted-foreground focus:outline-none focus:ring-1 focus:ring-ring"
 			/>
 			{hasDateFilter && (
 				<button
 					onClick={onClearDates}
 					title="Clear date filters"
-					className="rounded-md border border-border bg-background px-2 py-2 text-xs text-muted-foreground transition-colors hover:bg-muted hover:text-foreground cursor-pointer"
+					className="rounded-md border border-border bg-background h-9 flex items-center px-2 text-xs text-muted-foreground transition-colors hover:bg-muted hover:text-foreground cursor-pointer"
 				>
 					✕
 				</button>
